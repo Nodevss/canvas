@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background-color: #222; /* Dark background */
+  color: #eee; /* Light text color */
+  font-family: 'Helvetica Neue', sans-serif; /* Choose a sharp font */
+  overflow: hidden; /* Hide scrollbars for a cleaner look */
+}
+
+canvas {
+  background-color: #333; /* Slightly lighter canvas background */
+  border: 1px solid #555; /* Darker border for contrast */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+#toolbar {
+  background-color: #111; /* Darker toolbar background */
+  padding: 10px;
+  border-bottom: 1px solid #333; /* Slightly lighter border */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; /* Ensure toolbar stays on top */
+}
+
+.tool {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: 1px solid #333; /* Slightly lighter border */
+  border-radius: 5px;
+  cursor: pointer;
+  color: #eee; /* Light text color for tools */
+  transition: background-color 0.2s ease; /* Smooth transition for hover */
+}
+
+.tool.active {
+  background-color: #333; /* Slightly darker active tool color */
+}
+
+.tool:hover {
+  background-color: #444; /* Darker hover color */
+}
+
+input[type="color"] {
+  -webkit-appearance: none; /* Remove default color picker */
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%; /* Make color picker round */
+  background-color: #eee; /* Light background */
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%; /* Make color picker round */
+}
